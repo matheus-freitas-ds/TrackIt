@@ -62,8 +62,8 @@ export default function NewHabit() {
     }
 
     return (
-        <Container data-test="habit-create-container">
-            <form onSubmit={sendNewHabit}>
+        <Container>
+            <form onSubmit={sendNewHabit} data-test="habit-create-container">
                 <input type="text" placeholder="nome do hábito" data-test="habit-name-input" onChange={(e) => setName(e.target.value)} disabled={loading} required/>
                 <ContainerDays>
                     {weekDays.map((day) => (
